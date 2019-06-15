@@ -7,8 +7,8 @@ class Appointment
   end
 
   def initialize(doctor:, date:)
-    self.send(("#{:doctor}="), value)
-    self.send(("#{:date}="), value)
+    @doctor = doctor
+    @date = date
     @@all << self
   end
 end

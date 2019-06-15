@@ -8,7 +8,7 @@ describe "Appointment" do
       hevydevy = Patient.new("Devin Townsend")
       doctor_who.new_appointment(patient: hevydevy, date:"Friday, January 32nd")
       appointment = doctor_who.new_appointment(patient: hevydevy, date:"Caturday, January Purrty2nd")
-      doctor_who.new_appointment(hevydevy, "Satunday, January 34nd")
+      doctor_who.new_appointment(patient:hevydevy, date:"Satunday, January 34nd")
 
       expect(Appointment.all).to include(appointment)
     end

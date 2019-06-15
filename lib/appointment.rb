@@ -6,10 +6,9 @@ class Appointment
     @@all
   end
 
-  def initialize(doctor:, date:, patient:)
+  def initialize(doctor:, date:)
     @doctor = doctor
     @date = date
-    @patient = patient
     @@all << self
   end
 end

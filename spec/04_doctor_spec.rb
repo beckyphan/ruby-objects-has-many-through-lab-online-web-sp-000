@@ -31,8 +31,8 @@ describe 'Doctor' do
       doctor_who = Doctor.new('The Doctor')
       hevydevy = Patient.new('Devin Townsend')
       doctor_who.new_appointment(patient: hevydevy, date: 'Friday, January 32nd')
-      appointment = doctor_who.new_appointment(hevydevy, 'Saturday, January 33rd')
-      doctor_who.new_appointment(hevydevy, 'Rootenskadootenday, January 315th')
+      appointment = doctor_who.new_appointment(patient: hevydevy, date: 'Saturday, January 33rd')
+      doctor_who.new_appointment(patient: hevydevy, date:'Rootenskadootenday, January 315th')
       expect(doctor_who.appointments).to include(appointment)
     end
   end
